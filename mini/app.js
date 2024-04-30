@@ -6,7 +6,11 @@ dotenv.config({"path":"./setting/config.env"})
 let port=process.env.PORT
 let host=process.env.HOST
 
-const app = express()
+const app = express();
+app.use(express.json());
+app.use(express.urlencoded({extended :true}));
+
+
 
 app.get("/",(req,resp)=>{
     resp.end("hello welcome to our page")
