@@ -10,6 +10,7 @@ apiRouter.get("/", (req, resp) => {
 apiRouter.get("/read", (req, resp) => {
   console.log("read inside successfully");
   let employees = getEmployee();
+  resp.send(employees);
   console.log(employees);
 });
 
